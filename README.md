@@ -27,7 +27,7 @@ Then, follow these steps to run the program,
 1. Clone this repo:
 ```git clone git@github.com:ogonna-anaekwe/image-comparison.git```
 
-2. cd into project folder using ```image-comparison``` and run ```npm i```. This will install all the required packages/libraries needed for the program to function.
+2. cd into project folder using ```cd image-comparison``` and run ```npm i```. This will install all the required packages/libraries needed for the program to function.
 
 3. run ```npm run dev```. This starts an express server on port [8080](http://localhost:8080).
 
