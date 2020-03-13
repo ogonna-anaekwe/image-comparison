@@ -5,7 +5,7 @@ A simple image comparison program written in [Node.js](https://nodejs.org/en/).
 - [Homebrew (for macOS or Linux)](https://brew.sh/)
 - [NPM](https://www.npmjs.com/)
 - Node
-- [Git]()
+- Git
 
 To install Homebrew, run the following in your terminal
 ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"```
