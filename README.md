@@ -29,9 +29,11 @@ Then, follow these steps to run the program,
 
 2. cd into project folder using ```cd image-comparison``` and run ```npm i```. This will install all the required packages/libraries needed for the program to function.
 
-3. run ```npm run dev```. This starts an express server on port [8080](http://localhost:8080).
+3. Update the absolute paths shown in line28 of csvOutput.js and line7 of csvWriter.js to point to the absolute paths of **imagesin.csv** and **imagesout.csv** respectively.
 
-4. In your browser / postman, visit ```http:localhost:8080/version``` to confirm the version of the program. This confirms the program is live. Afterwards, visit ```http:localhost:8080/compare```. This does the image comparison using the **imagesin.csv** file as input, and it outputs **imagesout.csv** to the desktop showing the results of the image comparison. The high-level logic for this is described below.
+4. run ```npm run dev```. This starts an express server on port [8080](http://localhost:8080).
+
+5. In your browser / postman, visit ```http:localhost:8080/version``` to confirm the version of the program. This confirms the program is live. Afterwards, visit ```http:localhost:8080/compare```. This does the image comparison using the **imagesin.csv** file as input, and it outputs **imagesout.csv** to the desktop showing the results of the image comparison. The high-level logic for this is described below.
 
 # Program Logic
 This program relies on 4 core functions/controllers: ```getImages.js```, ```csvWriter.js```, ```compareImages.js```, and ```csvOutput.js```. All functions are commented.
@@ -42,5 +44,5 @@ To get the image comparison results, we call first ping the ```/compare``` endpo
 3. Writes the results to **imagesout.csv** using the model/format defined by ```csvWriter.js```.
 
 # Note
-**Ensure all images have the same height and width**. This is a requirement by the [pixelmatch](https://www.npmjs.com/package/pixelmatch) library which we leverage in comparing images. 
+**Ensure all images have the same height and width**. This is a requirement by the [pixelmatch](https://www.npmjs.com/package/pixelmatch) library which we leverage in comparing images.
 

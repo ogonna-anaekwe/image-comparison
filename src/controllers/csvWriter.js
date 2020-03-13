@@ -3,6 +3,7 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 const csvWriter = createCsvWriter({
     // path to csv output file
+    // TODO: update this with the path to the output file
     path: '/Users/Ogonna/Desktop/imagesout.csv',    
     // headers of the csv output file
     header: [

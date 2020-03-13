@@ -24,6 +24,7 @@ const getCSVOutput = (req, res) => {
     // this will eventually be written to a csv file
     const dataCSVWrite = []
 
+    // TODO: update this with path to your csv input file
     fs.createReadStream('/Users/Ogonna/Desktop/imagesin.csv')
         .pipe(csv())
         .on('data', async (row) => {
