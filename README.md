@@ -28,18 +28,16 @@ Then, follow these steps to run the program,
 
 3. run ```npm run dev```. This starts an express server on port 8080.
 
-4. In your browser / postman, visit ```http:localhost:8080/version``` to confirm the version of the program. This confirms the program is live. Afterwards, visit ```http:localhost:8080/compare```. This does the image comparison using the **imagesin.csv** file as input, and it outputs **imagesout.csv** to the desktop showing the results of the image comparison.
+4. In your browser / postman, visit ```http:localhost:8080/version``` to confirm the version of the program. This confirms the program is live. Afterwards, visit ```http:localhost:8080/compare```. This does the image comparison using the **imagesin.csv** file as input, and it outputs **imagesout.csv** to the desktop showing the results of the image comparison. The high-level logic for this is described below.
+
+# Program Logic
+This program relies on 4 core functions/controllers: ```getImages.js```, ```csvWriter.js```, ```compareImages.js```, and ```csvOutput.js```. All functions are commented.
+
+To get the image comparison results, we call first ping the ```/compare``` endpoint which then calls ```csvOutput.js```. ```csvOutput.js``` does the following:
+1. Reads/Parses **imagesin.csv** using ```getImages.js```.
+2. Loops through all rows in the csv file above, comparing field one and two (i.e. image 1 and image 2). This gives us the similarity ratio of both images as well as the execution time. This is done using ```compareImages.js```.
+3. Writes the results to **imagesout.csv** using the model/format defined by ```csvWriter.js```.
 
 # Note
 **Ensure all images have the same height and width**. This is a requirement by the [pixelmatch](https://www.npmjs.com/package/pixelmatch) library which we leverage in comparing images. 
-
-# Program Logic
-This program relies on 4 core functions/controllers: ```getImages.js```, ```csvWriter.js```, ```compareImages.js```, and ```csvOutput.js```.
-
-To get the image comparison results,
-1. Read/Parse **imagesin.csv** using ```getImages.js```.
-2. Loop through all rows in the csv file above, comparing field one and two (i.e. image 1 and image 2). This gives us the similarity ratio of both images as well as the execution time. This is done using ```compareImages.js```.
-3. Write the results to **imagesout.csv** using the model/format defined by ```csvWriter.js```.
-
-
 
