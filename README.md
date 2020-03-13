@@ -33,5 +33,13 @@ Then, follow these steps to run the program,
 # Note
 **Ensure all images have the same height and width**. This is a requirement by the [pixelmatch](https://www.npmjs.com/package/pixelmatch) library which we leverage in comparing images. 
 
+# Program Logic
+This program relies on 4 core functions/controllers: ```getImages.js```, ```csvWriter.js```, ```compareImages.js```, and ```csvOutput.js```.
+
+To get the image comparison results,
+1. Read/Parse **imagesin.csv** using ```getImages.js```.
+2. Loop through all rows in the csv file above, comparing field one and two (i.e. image 1 and image 2). This gives us the similarity ratio of both images as well as the execution time. This is done using ```compareImages.js```.
+3. Write the results to **imagesout.csv** using the model/format defined by ```csvWriter.js```.
+
 
 
