@@ -29,7 +29,7 @@ Then, follow these steps to run the program,
 
 2. cd into project folder using ```cd image-comparison``` and run ```npm i```. This will install all the required packages/libraries needed for the program to function.
 
-3. Update the absolute paths shown in line28 of csvOutput.js and line7 of csvWriter.js to point to the absolute paths of **imagesin.csv** and **imagesout.csv** respectively.
+3. Update the absolute paths shown in [line28](https://github.com/ogonna-anaekwe/image-comparison/blob/f82aa0f8dab3ad5987746433e58b6366e3e95d95/src/controllers/csvOutput.js#L28) of ```csvOutput.js``` and [line7](https://github.com/ogonna-anaekwe/image-comparison/blob/f82aa0f8dab3ad5987746433e58b6366e3e95d95/src/controllers/csvWriter.js#L7) of ```csvWriter.js``` to point to the absolute paths of **imagesin.csv** and **imagesout.csv** respectively.
 
 4. run ```npm run dev```. This starts an express server on port [8080](http://localhost:8080).
 
